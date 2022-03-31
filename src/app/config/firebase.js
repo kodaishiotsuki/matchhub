@@ -1,9 +1,11 @@
 //v9
-import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
-import "firebase/compat/database";
-import "firebase/compat/auth";
-import "firebase/compat/storage";
+// import firebase from "firebase/compat/app";
+// import "firebase/compat/firestore";
+// import "firebase/compat/database";
+// import "firebase/compat/auth";
+// import "firebase/compat/storage";
+
+import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
@@ -14,7 +16,4 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_MESSAGING_APP_ID,
 };
 
-firebase.initializeApp(firebaseConfig);
-firebase.firestore();
-
-export default firebase;
+export const app = initializeApp(firebaseConfig);
