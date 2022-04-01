@@ -23,7 +23,7 @@ export default function EventsFeed() {
       dispatch(listenToFeed(feed));
     });
     return () => {
-      off(getUserFeedRef()); //終了
+      // off(getUserFeedRef()); //終了
     };
   }, [dispatch]);
 
